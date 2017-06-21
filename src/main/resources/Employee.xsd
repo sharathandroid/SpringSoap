@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Employee" xmlns:tns="http://www.example.org/Employee" elementFormDefault="qualified">
+
+    <element name="getEmployeeRequest" type="tns:getEmployeeRequest"></element>
+    
+    <complexType name="getEmployeeRequest">
+    	<sequence>
+    		<element name="amount" type="double"></element>
+    		<element name="tenure" type="int"></element>
+    		<element name="dob" type="date"></element>
+    		<element name="annualSalary" type="double"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="getEmployeeResponse"
+    	type="tns:getEmployeeResponse">
+    </element>
+    
+    <complexType name="getEmployeeResponse">
+    	<sequence>
+    		<element name="eligibilityCode" type="int"></element>
+    		<element name="eligibilityMessage" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>
